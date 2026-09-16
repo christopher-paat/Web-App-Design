@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora básica</title>
+</head>
+<body>
+    <div class="basic-calculator">
+        <h4>Calculadora básica</h4>
+        <br>
+
+        <label for="num1">Número 1:</label>
+        <input type="text" id="num1">
+        <br><br>
+
+        <label for="num2">Número 2:</label>
+        <input type="text" id="num2">
+        <br><br>
+
+        <div>
+            <button type="button" onclick="add()">+</button>
+            <button type="button" onclick="subtract()">-</button>
+            <button type="button" onclick="squareRoot()">√</button>
+        </div>
+        <div style="margin-top: 5px;">
+            <button type="button" onclick="multiply()">*</button>
+            <button type="button" onclick="divide()">/</button>
+            <button type="button" onclick="inverse()">1/x</button>
+        </div>
+        <br>
+
+        <label for="result">Resultado:</label>
+        <input type="text" id="result" readonly>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
