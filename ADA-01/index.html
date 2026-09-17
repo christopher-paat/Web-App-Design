@@ -7,67 +7,84 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="main-container">
-        <header class="page-header">
-            <h2>Calculadoras y funciones matemáticas</h2>
-            <form action="buscar.php" method="POST" id="form-busqueda">
-                <button type="submit">Buscar</button>
-                <input type="text" name="busqueda" id="input-busqueda">
-            </form>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <div class="header-title">Calculadoras y funciones matemáticas</div>
+                <form action="buscar.php" method="POST" class="search-form" onsubmit="return validateSearch(event)">
+                    <button type="submit" class="search-btn">Buscar</button>
+                    <input type="text" name="q" id="searchInput" class="search-input">
+                </form>
+            </div>
+            <div class="header-bottom">
+                <a href="coming-soon.html">Ver consultas</a>
+            </div>
         </header>
 
-        <nav class="page-navigation">
-            <a href="coming-soon.html">Ver consultas</a>
-        </nav>
-
-        <main class="page-content">
-            <aside class="left-column">
-                <h4>Calculadoras</h4>
-                <ul class="menu-list">
-                    <li><a href="basics.html">Básicas</a></li>
-                    <li><a href="coming-soon.html">Científicas</a></li>
-                    <li><a href="coming-soon.html">Geométricas</a></li>
-                </ul>
-                
-                <h4>Funciones</h4>
-                <ul class="menu-list">
-                    <li><a href="coming-soon.html">Trigonométricas</a></li>
-                    <li><a href="coming-soon.html">Algebraicas</a></li>
-                    <li><a href="coming-soon.html">Series</a></li>
-                </ul>
+        <main class="main-content">
+            <aside class="col-left">
+                <div class="aside-box">
+                    <h3>Calculadoras</h3>
+                    <ul>
+                        <li><a href="basics.html">Básicas</a></li>
+                        <li><a href="coming-soon.html">Científicas</a></li>
+                        <li><a href="coming-soon.html">Geométricas</a></li>
+                    </ul>
+                    <h3>Funciones</h3>
+                    <ul>
+                        <li><a href="coming-soon.html">Trigonométricas</a></li>
+                        <li><a href="coming-soon.html">Algebraicas</a></li>
+                        <li><a href="coming-soon.html">Series</a></li>
+                    </ul>
+                </div>
             </aside>
 
-            <section class="center-column">
-                <h4>Calculadora científica</h4>
-                <div class="article">
-                    <img src="assets/img/calculator.jpg" alt="Calculadora científica">
-                    <a href="coming-soon.html">Seguir leyendo</a>
-                    <p>Una calculadora es un dispositivo que se utiliza para realizar cálculos aritméticos. Aunque las calculadoras modernas incorporan a menudo un ordenador de propósito general, se diseñan para realizar ciertas operaciones más que para ser flexibles. Por ejemplo, existen calculadoras gráficas especializadas en campos matemáticos gráficos como la trigonometría y la estadística</p>
-                </div>
-                
-                <div class="article">
-                    <img src="assets/img/math.jpg" alt="Matemáticas">
-                    <a href="coming-soon.html">Seguir leyendo</a>
-                    <p>En matemáticas, se dice que una magnitud o cantidad es función de otra si el valor de la primera depende del valor de la segunda. Por ejemplo, el área A de un círculo es función de su radio r (el valor del área es proporcional al cuadrado del radio, A = &pi;&middot;r<sup>2</sup>). Del mismo modo, la duración T de un viaje en tren entre dos ciudades separadas por una distancia d de 150 km depende de la velocidad v a la que se desplace el tren</p>
+            <section class="col-center">
+                <div class="section-box">
+                    <h3>Calculadora científica</h3>
+                    
+                    <article class="article">
+                        <div class="article-media">
+                            <img src="assets/img/calculator.jpg" alt="Calculadora científica">
+                            <a href="coming-soon.html">Seguir leyendo</a>
+                        </div>
+                        <div class="article-text">
+                            <p>Una calculadora es un dispositivo que se utiliza para realizar cálculos aritméticos. Aunque las calculadoras modernas incorporan a menudo un ordenador de propósito general, se diseñan para realizar ciertas operaciones más que para ser flexibles. Por ejemplo, existen calculadoras gráficas especializadas en campos matemáticos gráficos como la trigonometría y la estadística</p>
+                        </div>
+                    </article>
+
+                    <article class="article">
+                        <div class="article-media">
+                            <img src="assets/img/math.jpg" alt="Figuras geométricas">
+                            <a href="coming-soon.html">Seguir leyendo</a>
+                        </div>
+                        <div class="article-text">
+                            <p>En matemáticas, se dice que una magnitud o cantidad es función de otra si el valor de la primera depende del valor de la segunda. Por ejemplo, el área A de un círculo es función de su radio r (el valor del área es proporcional al cuadrado del radio, A = π·r²). Del mismo modo, la duración T de un viaje en tren entre dos ciudades separadas por una distancia d de 150 km depende de la velocidad v a la que se desplace el tren</p>
+                        </div>
+                    </article>
                 </div>
             </section>
 
-            <aside class="right-column">
-                <h4>Marcas de calculadoras</h4>
-                <p>En el mercado se encuentran una amplia y diversidad de marcas, <a href="coming-soon.html">Seguir leyendo</a></p>
-                
-                <h4>Software</h4>
-                <p>Hoy en día nos podemos encontrar el Web calculadoras con la que puedes hacer operaciones matemáticas sencillas y avanzadas en una aplicación con un diseño atractivo. <a href="coming-soon.html">Seguir leyendo</a></p>
+            <aside class="col-right">
+                <div class="aside-box">
+                    <h4>Marcas de calculadoras</h4>
+                    <p>En el mercado se encuentran una amplia y diversidad de marcas, <a href="coming-soon.html">Seguir leyendo</a></p>
+
+                    <h4>Software</h4>
+                    <p>Hoy en día nos podemos encontrar en Web calculadoras con la que puedes hacer operaciones matemáticas sencillas y avanzadas en una aplicación con un diseño atractivo. <a href="coming-soon.html">Seguir leyendo</a></p>
+                </div>
             </aside>
         </main>
     </div>
-    <footer class="page-footer">
+    <footer class="footer">
         <div class="footer-links">
-            <a href="coming-soon.html">Descargas</a> | <a href="coming-soon.html">Aplicaciones</a> | <a href="coming-soon.html">Dispositivos</a>
+            <a href="coming-soon.html">Descargas</a> | 
+            <a href="coming-soon.html">Aplicaciones</a> | 
+            <a href="coming-soon.html">Dispositivos</a>
         </div>
-        <div class="copyright">
-                &copy; FMAT
-        </div>
+        <div class="footer-copy">© Fmat</div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
+

@@ -1,75 +1,101 @@
-function getNumbers() {
-    let n1 = parseFloat(document.getElementById("num1").value);
-    let n2 = parseFloat(document.getElementById("num2").value);
-    return { num1: n1, num2: n2 };
+function validateSearch(event) {
+    const searchInput = document.getElementById('searchInput');
+    if (!searchInput.value || searchInput.value.trim() === '') {
+        alert('El espacio de captura para la busqueda es vacio.');
+        searchInput.focus();
+        event.preventDefault();
+        return false;
+    }
+    return true;
 }
 
-function showResult(value) {
-    document.getElementById("result").value = value;
+function getNum1() {
+    const val = document.getElementById('num1').value;
+    if (val.trim() === '') return null;
+    const num = parseFloat(val);
+    return isNaN(num) ? null : num;
 }
 
-function add() {
-    let values = getNumbers();
-    if (isNaN(values.num1) || isNaN(values.num2)) {
-        alert("Error: Ingresa valores numericos validos en ambos campos.");
-        return;
-    }
-    showResult(values.num1 + values.num2);
+function getNum2() {
+    const val = document.getElementById('num2').value;
+    if (val.trim() === '') return null;
+    const num = parseFloat(val);
+    return isNaN(num) ? null : num;
 }
 
-function subtract() {
-    let values = getNumbers();
-    if (isNaN(values.num1) || isNaN(values.num2)) {
-        alert("Error: Ingresa valores numericos válidos en ambos campos.");
-        return;
-    }
-    showResult(values.num1 - values.num2);
+function setResult(val) {
+    document.getElementById('resultado').value = val;
 }
 
-function multiply() {
-    let values = getNumbers();
-    if (isNaN(values.num1) || isNaN(values.num2)) {
-        alert("Error: Ingresa valores numericos válidos en ambos campos.");
+function suma() {
+    const n1 = getNum1();
+    const n2 = getNum2();
+    if (n1 === null || n2 === null) {
+        alert("Ingrese valores numericos validos.");
         return;
     }
-    showResult(values.num1 * values.num2);
+    setResult(n1 + n2);
 }
 
-function divide() {
-    let values = getNumbers();
-    if (isNaN(values.num1) || isNaN(values.num2)) {
-        alert("Error: Ingresa valores numericos validos en ambos campos.");
+function resta() {
+    const n1 = getNum1();
+    const n2 = getNum2();
+    if (n1 === null || n2 === null) {
+        alert("Ingrese valores numericos validos.");
         return;
     }
-    if (values.num2 === 0) {
-        alert("Error: No es posible dividir entre cero.");
-        return;
-    }
-    showResult(values.num1 / values.num2);
+    setResult(n1 - n2);
 }
 
-function squareRoot() {
-    let num1 = parseFloat(document.getElementById("num1").value);
-    if (isNaN(num1)) {
-        alert("Error: Ingresa un valor numerico valido en el 'Numero 1.'");
+function multiplicacion() {
+    const n1 = getNum1();
+    const n2 = getNum2();
+    if (n1 === null || n2 === null) {
+        alert("Ingrese valores numericos validos.");
         return;
     }
-    if (num1 < 0) {
-        alert("Error: No se puede calcular la raiz cuadrada de un numero negativo.");
-        return;
-    }
-    showResult(Math.sqrt(num1));
+    setResult(n1 * n2);
 }
 
-function inverse() {
-    let num1 = parseFloat(document.getElementById("num1").value);
-    if (isNaN(num1)) {
-        alert("Error: Ingresa un valor numerico valido en el 'Numero 1.'");
+function division() {
+    const n1 = getNum1();
+    const n2 = getNum2();
+    if (n1 === null || n2 === null) {
+        alert("Ingrese valores numericos validos.");
         return;
     }
-    if (num1 === 0) {
-        alert("Error: No es posible dividir 1 entre cero.");
+    if (n2 === 0) {
+        alert("Error: Division entre cero no permitida.");
         return;
     }
-    showResult(1 / num1);
+    setResult(n1 / n2);
 }
+
+function raizCuadrada() {
+    const n1 = getNum1();
+    if (n1 === null) {
+        alert("Ingrese un valor numerico valido en 'Numero 1.'");
+        document.getElementById('num1').focus();
+        return;
+    }
+    if (n1 < 0) {
+        alert("Error: Raiz cuadrada de numero negativo no es real.");
+        return;
+    }
+    setResult(Math.sqrt(n1));
+}
+
+function inversa() {
+    const n1 = getNum1();
+    if (n1 === null) {
+        alert("Ingrese un valor numerico valido en 'Numero 1.'");
+        document.getElementById('num1').focus();
+        return;
+    }
+    if (n1 === 0) {
+        alert("Error: Division entre cero no permitida.");
+        return;
+    }
+    setResult(1 / n1);
+}
+

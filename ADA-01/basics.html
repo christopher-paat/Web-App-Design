@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora básica</title>
+    <title>Calculadora Básica</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="basic-calculator">
-        <h4>Calculadora básica</h4>
-        <br>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <div class="header-title">Calculadoras y funciones matemáticas</div>
+            </div>
+        </header>
 
-        <label for="num1">Número 1:</label>
-        <input type="text" id="num1">
-        <br><br>
+        <main class="main-content-full">
+            <h3 class="calc-title">Calculadora básica</h3>
+            
+            <div class="calc-form">
+                <div class="input-group">
+                    <label for="num1">Número 1:</label>
+                    <input type="text" id="num1">
+                </div>
+                <div class="input-group">
+                    <label for="num2">Número 2:</label>
+                    <input type="text" id="num2">
+                </div>
 
-        <label for="num2">Número 2:</label>
-        <input type="text" id="num2">
-        <br><br>
+                <div class="button-group">
+                    <div class="button-row">
+                        <button type="button" onclick="suma()">+</button>
+                        <button type="button" onclick="resta()">-</button>
+                        <button type="button" onclick="raizCuadrada()">√</button>
+                    </div>
+                    <div class="button-row">
+                        <button type="button" onclick="multiplicacion()">*</button>
+                        <button type="button" onclick="division()">/</button>
+                        <button type="button" onclick="inversa()" style="font-size: 0.85em;">1/x</button>
+                    </div>
+                </div>
 
-        <div>
-            <button type="button" onclick="add()">+</button>
-            <button type="button" onclick="subtract()">-</button>
-            <button type="button" onclick="squareRoot()">√</button>
-        </div>
-        <div style="margin-top: 5px;">
-            <button type="button" onclick="multiply()">*</button>
-            <button type="button" onclick="divide()">/</button>
-            <button type="button" onclick="inverse()">1/x</button>
-        </div>
-        <br>
-
-        <label for="result">Resultado:</label>
-        <input type="text" id="result" readonly>
+                <div class="result-group">
+                    <label for="resultado">Resultado:</label>
+                    <input type="text" id="resultado" readonly>
+                </div>
+            </div>
+        </main>
     </div>
-
     <script src="js/main.js"></script>
 </body>
 </html>
+
