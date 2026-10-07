@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <div class="header-title">Calculadoras y funciones matemáticas</div>
+            </div>
+        </header>
+
+        <main class="main-content-full">
+            <h3 class="calc-title">Calculadora básica</h3>
+            
+            <div class="calc-form">
+                <div class="input-group">
+                    <label for="num1">Número 1:</label>
+                    <input type="text" id="num1">
+                </div>
+                <div class="input-group">
+                    <label for="num2">Número 2:</label>
+                    <input type="text" id="num2">
+                </div>
+
+                <div class="button-group">
+                    <div class="button-row">
+                        <button type="button" onclick="suma()">+</button>
+                        <button type="button" onclick="resta()">-</button>
+                        <button type="button" onclick="raizCuadrada()">√</button>
+                    </div>
+                    <div class="button-row">
+                        <button type="button" onclick="multiplicacion()">*</button>
+                        <button type="button" onclick="division()">/</button>
+                        <button type="button" onclick="inversa()" style="font-size: 0.85em;">1/x</button>
+                    </div>
+                </div>
+
+                <div class="result-group">
+                    <label for="resultado">Resultado:</label>
+                    <input type="text" id="resultado" readonly>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

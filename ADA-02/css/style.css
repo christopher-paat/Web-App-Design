@@ -1,0 +1,28 @@
+.site-container {
+    max-width: 1000px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.article p {
+    line-height: 1.3;
+}
+
+.main-content-full {
+    min-height: 400px;
+}
+
+.calc-card {
+    max-width: 380px;
+}
+
+.calc-buttons {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.calc-buttons .btn {
+    font-size: 1.15em;
+    font-weight: bold;
+}
