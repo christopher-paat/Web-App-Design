@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras y funciones matemáticas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+    <div class="container site-container bg-white border border-2 border-secondary rounded-3 p-0 my-3">
+        <header class="header">
+            <nav class="navbar px-3 gap-2 border-bottom border-2 border-secondary">
+                <a class="navbar-brand fw-bold" href="index.html">Calculadoras y funciones matemáticas</a>
+                <form action="buscar.php" method="POST" class="search-form d-flex" role="search" id="searchForm">
+                    <input type="text" name="q" id="searchInput" class="form-control form-control-sm me-2" placeholder="Buscar..." aria-label="Buscar">
+                    <button type="submit" class="btn btn-light btn-sm">Buscar</button>
+                </form>
+            </nav>
+            <div class="header-bottom border-bottom border-2 border-secondary px-3 py-2">
+                <a href="coming-soon.html" class="link-primary">Ver consultas</a>
+            </div>
+        </header>
+
+        <main class="row g-3 p-3 m-0">
+            <aside class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="h6 card-title fw-bold">Calculadoras</h3>
+                        <div class="list-group list-group-flush mb-3">
+                            <a href="basics.html" class="list-group-item list-group-item-action">Básicas</a>
+                            <a href="coming-soon.html" class="list-group-item list-group-item-action">Científicas</a>
+                            <a href="coming-soon.html" class="list-group-item list-group-item-action">Geométricas</a>
+                        </div>
+                        <h3 class="h6 card-title fw-bold">Funciones</h3>
+                        <div class="list-group list-group-flush">
+                            <a href="coming-soon.html" class="list-group-item list-group-item-action">Trigonométricas</a>
+                            <a href="coming-soon.html" class="list-group-item list-group-item-action">Algebraicas</a>
+                            <a href="coming-soon.html" class="list-group-item list-group-item-action">Series</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="h5 card-title fw-bold mb-3">Calculadora científica</h3>
+
+                        <article class="row g-3 mb-3 article">
+                            <div class="col-3 d-flex flex-column">
+                                <img src="assets/img/calculator.jpg" alt="Calculadora científica" class="img-fluid mb-1">
+                                <a href="coming-soon.html" class="small">Seguir leyendo</a>
+                            </div>
+                            <div class="col-9">
+                                <p class="small text-justify mb-0">Una calculadora es un dispositivo que se utiliza para realizar cálculos aritméticos. Aunque las calculadoras modernas incorporan a menudo un ordenador de propósito general, se diseñan para realizar ciertas operaciones más que para ser flexibles. Por ejemplo, existen calculadoras gráficas especializadas en campos matemáticos gráficos como la trigonometría y la estadística</p>
+                            </div>
+                        </article>
+
+                        <article class="row g-3 article">
+                            <div class="col-3 d-flex flex-column">
+                                <img src="assets/img/math.jpg" alt="Figuras geométricas" class="img-fluid rounded mb-1">
+                                <a href="coming-soon.html" class="small">Seguir leyendo</a>
+                            </div>
+                            <div class="col-9">
+                                <p class="small text-justify mb-0">En matemáticas, se dice que una magnitud o cantidad es función de otra si el valor de la primera depende del valor de la segunda. Por ejemplo, el área A de un círculo es función de su radio r (el valor del área es proporcional al cuadrado del radio, A = π·r²). Del mismo modo, la duración T de un viaje en tren entre dos ciudades separadas por una distancia d de 150 km depende de la velocidad v a la que se desplace el tren</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="col-md-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="h6 card-title fw-bold">Marcas de calculadoras</h4>
+                        <p class="small">En el mercado se encuentran una amplia y diversidad de marcas, <a href="coming-soon.html">Seguir leyendo</a></p>
+
+                        <h4 class="h6 card-title fw-bold mt-3">Software</h4>
+                        <p class="small mb-0">Hoy en día nos podemos encontrar en Web calculadoras con la que puedes hacer operaciones matemáticas sencillas y avanzadas en una aplicación con un diseño atractivo. <a href="coming-soon.html">Seguir leyendo</a></p>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <footer class="container site-container border border-2 border-secondary rounded-3 bg-white px-3 py-2 mb-3">
+        <div class="d-flex flex-wrap justify-content-between align-items-center small">
+            <div class="footer-links">
+                <a href="coming-soon.html">Descargas</a> |
+                <a href="coming-soon.html">Aplicaciones</a> |
+                <a href="coming-soon.html">Dispositivos</a>
+            </div>
+            <div class="text-muted">© Fmat</div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
