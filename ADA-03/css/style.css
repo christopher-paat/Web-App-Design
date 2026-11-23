@@ -1,0 +1,15 @@
+.login-card {
+    max-width: 420px;
+}
+
+.site-container {
+    max-width: 900px;
+}
+
+.navbar .dropdown-toggle {
+    color: #fff;
+}
+
+#usuarioSesion {
+    font-weight: 600;
+}
