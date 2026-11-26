@@ -4,7 +4,6 @@ $(function () {
         $('#mensaje').addClass('d-none');
         $('#btnEnviar').prop('disabled', true);
 
-        // jQuery.post() requerido por la ADA
         $.post('login.php', $(this).serialize(), function (resp) {
             if (resp.ok) {
                 window.location.href = 'estudiantes.php';

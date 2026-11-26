@@ -1,6 +1,3 @@
--- ADA 3: Base de datos "controlescolar"
--- Importar desde phpMyAdmin (pestaña "Importar") o desde la consola de MySQL.
-
 CREATE DATABASE IF NOT EXISTS controlescolar
     CHARACTER SET utf8mb4
     COLLATE utf8mb4_unicode_ci;
@@ -17,7 +14,7 @@ CREATE TABLE usuarios (
 
 -- Usuario de prueba
 INSERT INTO usuarios (usuario, contrasena) VALUES
-('juan.ucan', '12345');
+('christopher.paat', '12345');
 
 -- Tabla de estudiantes
 DROP TABLE IF EXISTS estudiantes;
@@ -30,5 +27,5 @@ CREATE TABLE estudiantes (
 );
 
 INSERT INTO estudiantes (matricula, nombre, apellidoPaterno, apellidoMaterno, edad) VALUES
-('34567', 'Pedro Antonio', 'Ferrera', 'Ortiz', 20),
-('75432', 'Gabriela María', 'Cetina', 'Novelo', 19);
+('a24216351', 'Pedro Antonio', 'Ferrera', 'Ortiz', 20),
+('a24216352', 'Gabriela María', 'Cetina', 'Novelo', 19);

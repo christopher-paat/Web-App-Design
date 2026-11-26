@@ -52,7 +52,7 @@ $usuario = htmlspecialchars($_SESSION['usuario']);
         </main>
     </div>
 
-    <!-- Modal Nuevo / Modificar (Bootstrap) -->
+    <!-- Modal Nuevo / Modificar -->
     <div class="modal fade" id="modalEstudiante" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
         <div class="modal-dialog">
             <form class="modal-content" id="formEstudiante" autocomplete="off">
@@ -92,7 +92,7 @@ $usuario = htmlspecialchars($_SESSION['usuario']);
         </div>
     </div>
 
-    <!-- Confirmación de borrado (jQuery UI dialog) -->
+    <!-- Confirmación de borrado -->
     <div id="dialogBorrar" title="¿Eliminar estudiante?" style="display:none">
         <p>Se eliminará al estudiante <strong id="nombreBorrar"></strong>. Esta acción no se puede deshacer.</p>
     </div>
